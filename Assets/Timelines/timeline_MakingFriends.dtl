@@ -1,0 +1,57 @@
+join Enemy12 center
+Enemy12: "So... what now?"
+Enemy12: "Do you think... we can be friends?"
+- "I'd like to be friends"
+	jump LikeTo
+- "I'm sorry, but I don't want to be friends with you"
+	jump timeline_Stopped/Rejected
+label LikeTo
+- "...But I don't think it can work"
+	jump but
+- "Where do we start?"
+	jump Friends
+label but
+- "The world needs saving"
+	jump Duty
+- "You're a Skeleton, an enemy. Incapable of friendship."
+	jump Racist
+label Duty
+Enemy12: "I know, I know, but surely you can take a break every now and then, no?"
+Enemy12: "If you really want to, you can just come by once in a while"
+Enemy12: "I'm not asking you to be here all the time. If you can spare an hour or two every few weeks, that would be enough."
+Enemy12: "We can talk, we can spar, we can just... hang out?"
+Enemy12: "And I'm sure saving the world will be easier if you're not going through everything alone!"
+- "That... sounds good."
+	jump Friends
+- "I just don't think it's such a great idea..."
+	Enemy12: "I...[pause=2] then do something else for me, will you?"
+	Enemy12: "When you come across others like me, send them my way, okay?"
+	Enemy12: "So the next time you find yourself nearby, you can drop by for a minute and hang out with a bunch of us."
+	Enemy12: I look at you for a moment, as if trying to read your emotions
+	if {helmChoice} == "Helmet":
+		Enemy12: Though your helmet is making it impossible.
+	elif {helmChoice} == "Hood":
+		Enemy12: Though your hood is obscuring your face.
+	Enemy12: "Alright, off with you then. And when you're done saving the world, maybe you can finally rest, yeah?"
+	Enemy12: "Take care out there, and good luck"
+	Enemy12: Watching you leave with determination in your eyes... it's somehow bittersweet...
+	[end_timeline]
+label Racist
+Enemy12: "What?"
+Enemy12: "Who the fuck do you think you are?"
+Enemy12: "Heh."
+Enemy12: "HAHAHA"
+Enemy12: "It's oddly comforting, knowing I was never the problem."
+Enemy12: "The problem is you, a lonely, misarble racist asshole."
+Enemy12: "So you can fuck off now, and don't ever come back."
+Enemy12: "I'll be sending the memo to the others. No more babying you."
+Enemy12: "No more prizes for killing us. No more training. No more coming at you one by one."
+Enemy12: "No more slowly giving you tougher and tougher challenges so you get to grow."
+Enemy12: "You're done for..."
+[end_timeline]
+label Friends
+Enemy12: "I'm... I'm really happy to hear that."
+Enemy12: "I was really scared. REALLY scared, that you would be cold, uncaring or even mean..."
+Enemy12: I feel giddy. Such happiness I hadn't known for such a long time.
+Enemy12: "So, tell me about yourself, Hero, and I'll tell you about me..."
+[end_timeline]

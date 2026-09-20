@@ -1,0 +1,76 @@
+join Enemy12 center
+Enemy12: "You... [pause=0.5]actually stopped?"
+Enemy12: "I didn't think you would."
+Enemy12: "Maybe... maybe I was wrong about you"
+Enemy12: "Alright, well, here it goes..."
+Enemy12: "Why don't you come to see me anymore?"
+- "See you? Why would I?"
+	set {whyNoVisit} = "whyWouldI"
+	jump WhyWouldI
+- "I have been busy, you know, saving the world and all..."
+	set {whyNoVisit} = "Busy"
+	jump Busy
+label WhyWouldI
+Enemy12: "...[pause=1] Yeah... [pause = 1] Why would you?"
+Enemy12: "After all, I'm just a nobody"
+Enemy12: "A nobody who helped you grow so much, but I guess that doesn't mean anything to you, huh?"
+Enemy12: "I'm only one of the many people you took advantage of and then left behind"
+Enemy12: "Well, I won't let you forget who let you get so damn strong."
+Enemy12: "It was US. Me. You thought you fought for and earned everything you have now?"
+Enemy12: "Well, newsflash, little hero, you'd never be anything more than a whimpy wannabe whithout me, and others like me who trained you so you'd be more experienced, who gave you money and supplies and gear"
+Enemy12: "Who came to know your determination,[pause=0.3] to enjoy the challnege,[pause=0.5] to await your return every time."
+Enemy12: "... To miss you when you don't..."
+Enemy12: "Do you even remember me?"
+jump Explaining
+label Busy
+Enemy12: "Heh. Busy huh? Too busy to come say 'Hi'? Too busy to stop by for a second and chat?"
+Enemy12: "It's not like I wanted you to be here everyday."
+Enemy12: "I don't expect you to have tea parties with me."
+Enemy12: "I just... I keep thinking about you... And it feels like you never think about me"
+Enemy12: "Did you even miss me?"
+- "..."
+	Enemy12: "... Do you even know who I am?"
+- "No."
+	Enemy12: "You don't even know who I am, do you?"
+label Explaining
+- "I remember fighting you"
+- "You gave me a tough fight in the beginning"
+Enemy12: "And that's it, huh?"
+Enemy12: "You have no idea why I'm so worked up even."
+Enemy12: "Heh. Hehehe... All this time... You don't even think about how you affected me..."
+Enemy12: "I... I've been here... for So long..."
+Enemy12: "And in all these years, you're the only thing that's ever come here"
+Enemy12: "And you kept coming back for a while"
+Enemy12: "... We had an unspoken agreement, you and I"
+Enemy12: "Or at least so I thought"
+Enemy12: "You'd come and we'd spar"
+Enemy12: "And I'd keep some of my old belongings on me, you know, just a bunch of coins, weapons, books"
+Enemy12: "As a way to reward you if you won."
+Enemy12: "And every time you'd be a little bit stronger"
+Enemy12: "And I watched you grow, from a weak little thing, to a mediocre soldier, to a formidable warrior"
+Enemy12: "To this; this legend you've become."
+Enemy12: "I have to admit, I feel... proud... of how much you've grown."
+Enemy12: "Like raising someone. Like a parent or a teacher."
+Enemy12: "Seeing your influence inderctly changing the world."
+Enemy12: "Does this make any sense to you?"
+- "Yeah."
+	set {MakesSense} = true
+	jump timeline_MakingFriends/
+- "Not at all"
+	set {MakesSense} = false
+label Rejected
+
+Enemy12: "Right... No I get it. I guess... Thanks for listenin'."
+Enemy12: I feel lost for words. I just poured out my heart and...
+Enemy12: "I hope you find whatever it is you're looking for..."
+Enemy12: "That's it then... Goodbye, Hero."
+Enemy12: I wish it was a friend you were looking for. I wish it was me.
+Enemy12: I watch you leave... leave me behind to return to my perpetual solitude.
+Enemy12: There's a sadness. The sadness of losing a friend. Of missing an opportunity.
+Enemy12: But then... [pause=1]There's hope. I shamble towards the stairs, where you'd come from.
+Enemy12: I know there are more things down there. Things like me...
+Enemy12: Things looking for a friend.
+Enemy12: In all this time, I have never left the bridge.
+Enemy12: I look at the stairs leading down, Gather my courage, and then...
+Enemy12: With a final look back at the bridge, I descend.
+[end_timeline]

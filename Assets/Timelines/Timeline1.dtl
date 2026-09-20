@@ -1,0 +1,58 @@
+join Enemy12 center
+Enemy12: I hear heavy footsteps echoing through the empty halls, slowly ascending towards me.
+Enemy12: No one has ever come up those stairs except The Hero.
+Enemy12: I have been here on this bridge for what... [pause=0.5]Two hundred years now? Maybe three?
+Enemy12: I was slain on this bridge, and I was brought back to life, or rather Un-life, on this bridge. It took years for me to get my bearings, get over the fact that I'm a moving shamble of bones.
+Enemy12: At some point I got bored enough to look around. The place is pretty big actually. By now, I’ve memorized every brick of it, but in the early years, it was a place of wonder.
+Enemy12: At some point I got bored enough to look around. The place is pretty big actually. By now, I’ve memorized every brick of it, but in the early years, it was a place of wonder.
+Enemy12: Treasures and gold scattered across the floor, hidden rooms and passages everywhere, books stacked up high, armor and weapons just laying around.
+Enemy12: I took some of it, sure. Read a few books, kept some of the gold and weapons. Keepin myself busy.
+Enemy12: The place started to fall apart over time. Too many 'things' looting everything. By the time The Hero came, it had been in ruins for a long time...
+[wait time="1.5" hide_text="false"]
+Enemy12: Footsteps getting louder.
+Enemy12: I remember the first time you came down, Hero.
+Enemy12: Weak little thing, thrown into the machinations of a grand destiny, I could tell you'd maybe fought a few rats, but I was way above your paygrade.
+Enemy12: I heard you then too, sure, but you were trying to be all sneaky about it. Crouching in the stairs, I could almost smell the fear on you.
+Enemy12: When you knew the jig was up, you pulled out that sorry excuse of a sword and swung with bravado[pause=0.3].[pause=0.3].[pause=0.3].[pause=1] and missed!
+Enemy12: I killed you, quite easily too. But soon enough you were back.
+label Character Creater
+Enemy12: And here you are, once again… The first thing I see is your head\:
+- A fortified helmet that carries an aura of power and strength.
+	set {helmChoice} = "Helmet"
+- Covered by a black hood, making it hard to spot you at all.
+	set {helmChoice} = "Hood"
+- Uncovered, your hair swaying as you climb the stairs.
+	set {helmChoice} = "Head"
+Enemy12: I can see more of you as you ascend, wearing\:
+- heavy armour
+	if {helmChoice} == "Helmet":
+		Enemy12: The armour matches your helmet, a legendary set, making you look invincible.
+	elif {helmChoice} == "Hood":
+		Enemy12: The cloak of your hood billowing behind dramatically.
+	elif {helmChoice} == "Head":
+		Enemy12: But without a helmet, it looks as if you're not concerned about defense at all.
+- robes
+	if {helmChoice} == "Helmet":
+		Enemy12: An odd choice to pair with the helmet, but perhaps they carry benefits I do not understand.
+	elif {helmChoice} == "Hood":
+		Enemy12: The cloak trailing silently behind, not so much as a ruffle from all the cloth.
+	elif {helmChoice} == "Head":
+		Enemy12: A mystical look about you, perhaps arcane powers brew within you.
+- nothing, except to maintain some modesty | [if {helmChoice} != "Hood"]
+	if {helmChoice} == "Helmet":
+		Enemy12: As if this is all a joke to you...
+	elif {helmChoice} == "Head":
+		Enemy12: Muscles flexing and on full display.
+Enemy12: Your getup may vary from time to time, but there's no mistaking you for anyone else.
+Enemy12: Why are you here though? Are you lost? Looking for some secret treasure?
+Enemy12: Or[pause=0.3].[pause=0.3].[pause=0.3].[pause=1.25] No, you're not here for me.[pause= 0.5] Of course not.
+Enemy12: I watch you get closer, and you barely even register me, even though I'm the only moving thing on this bridge.
+Enemy12: My head spins and time seems to slow down... I-
+Enemy12: I don't know what to say! It's hard to interrupt you.
+Enemy12: I see you move past me and I panic. If you leave again, I don't know when I'll see you again.[pause=0.5] IF I'll see you again.
+Enemy12: "HEY" I blurt out, suddenly.
+Enemy12: "Just... wait"
+- Ignore the Skeleton
+	jump timeline_ignored/
+- Stop and look at the Skeleton
+	jump timeline_Stopped/

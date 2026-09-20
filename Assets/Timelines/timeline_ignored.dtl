@@ -1,0 +1,41 @@
+join Enemy12 center
+Enemy12: "Whah-" I start walking with you.
+Enemy12: "You're just going to walk past me huh?"
+Enemy12: "Like you did the last dozen time you came?"
+Enemy12: "I know you can take me out with a single blow, so why don't you huh?"
+label Question
+- "You're not even worth it" | [if {notWorthIt} == false]
+	set {notWorthIt} = true
+	Enemy12: "Ah well you can fuck right off then."
+	Enemy12: "But just so you know, You'd be nothing without me."
+	Enemy12: "NOTHING. YOU HEAR ME? I MADE YOU."
+	jump Question
+- "How come I never had this encounter before?"
+	set {encounter} = true
+	jump Encounter
+- Destroy the Skeleton
+	set {kill} = true
+	In a single instant the Skeleton is reduced to a pile of bones.
+	jump Killed
+- Stop and look at it "What do you mean you made me?" | [if {notWorthIt} == true]
+	jump timeline_Stopped/
+label Encounter
+Enemy12: "Encounter? What? Is this like a joke to you?"
+- Keep walking "Yeah."
+	Enemy12: "Right. For all your pretense of being a hero, you're every bit as heartless as the Tyrant."
+	Enemy12: I stop walking "At least I know that now."
+	Enemy12: "Good riddance."
+	Enemy12: As I watch you leave, a conflict of thoughts war in my head.
+	Enemy12: I was hoping you'd act differently. Hoping you would understand.
+	Enemy12: But there's nothing that can be done.
+	Enemy12: I don't know if I will ever move on. It's not like I get to meet anyone else up here...
+	Enemy12: But at least now I can rest easier, knowing there was nothing to be done.
+	Enemy12: Knowing I did everything I could...
+	Enemy12: For a chance at friendship.
+	[end_timeline]
+- Stop and look at it "No, I'm curious."
+	jump timeline_Stopped/
+label Killed
+You gained 50 XP. [pause=1]Your XP = 178,379.
+You gained 20 Gold. [pause=1]Your Gold = 95,832.
+[end_timeline]
